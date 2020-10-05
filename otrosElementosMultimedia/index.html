@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Iframes</title>
+
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style type="text/css">
+    @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Courier+Prime:ital@1&display=swap');
+
+        *{
+            margin:0;
+            padding:0;
+
+        }
+
+        body{
+            background: #82121465;
+            
+        }
+
+        .container{
+            background-color: rgba(17, 17, 219, 0.329);
+            width: 90%;
+            margin: auto;
+            
+            
+        }
+
+        audio{
+            width: 50px;
+            height: 50px;
+            opacity: .4;
+            margin-left: 80%;
+            padding-top: 40px;
+            
+        }
+
+        .video{
+            /*560*/
+            width: 70%;
+            margin: 50px auto;
+            /*border: 5px 5px 5px 1 solid #fff;
+            background: #fff;
+            
+            /*margin-left: -280px;*/
+        }
+
+        .pagina{
+            width: 100%;
+            height: 400px;
+            margin: -50px 0 0 0;
+            background-repeat: repeat-x;
+            background-position: bottom center;
+            background-image: url(../img/dragon.svg);
+            background-size: 8em;
+            background-attachment: fixed;
+            
+            
+            
+            
+            /*margin-left: -280px;*/
+        
+        }
+        .i2020{
+            padding-top: 20px;
+            margin-left: 20%;
+            padding-bottom: 90px;
+           
+
+        }
+
+        article{
+            
+            background-color: chartreuse;
+            background-repeat: repeat-x;
+            background-position: bottom center;
+            background-image: url(img/Quarantine2020.svg);
+            background-size: 8em;
+            background-attachment: fixed;
+            
+        }
+        
+        .total{
+            width: 80%;
+            margin: 0 auto;
+            margin: 0 auto 0 -10%;
+            
+        }
+
+        header{
+            font-family: 'Bangers', cursive;
+            margin: -80px auto 0 ;
+            text-align: center;
+            
+        }
+        h2{
+            margin: 20px auto;
+            font-size: 9em;
+            color: rgba(255, 255, 255, 0.63);
+            opacity: .6;
+            position: absolute;
+            top: 260px;
+            right: 90px;
+            transform: rotate(342deg);
+            font-family: 'Courier Prime', monospace;
+        }
+        .secon{
+            margin: 20px auto;
+            font-size: 9em;
+            color: rgba(0, 4, 255, 0.63);
+            opacity: .6;
+            position: absolute;
+            top: 260px;
+            right: 70px;
+            transform: rotate(342deg);
+            font-family: 'Courier Prime', monospace;
+        }
+        .red{
+            margin: 20px auto;
+            font-size: 9em;
+            color: rgba(252, 5, 5, 0.63);
+            opacity: .6;
+            position: absolute;
+            top: 260px;
+            right: 110px;
+            transform: rotate(342deg);
+            font-family: 'Courier Prime', monospace;
+        }
+     /*picture{
+         margin: 0 auto 0 -10%;
+      }
+    */
+    </style>
+</head>
+<body>
+<div class="container">
+    <audio src="audio/Bonga_-_mona_ki_ngi_xica_Synapson_remix-.mp3" controls autoplay></audio>
+    
+        <header>
+            <h1>Página personal</h1>
+            <h1>De</h1>
+            <h1>Carlos  De  Ticantti</h1>
+        </header>
+    
+    <div class="video">
+        
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/Fo6qxye-Vbc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <h2 class="secon">B  U  G  G</h2>
+    <h2>B  U  G  G</h2>
+    <h2 class="red">B  U  G  G</h2>
+    <div class="pagina">
+        
+    <img id="i2020"src="img/Quarantine2020.svg" alt="fish" width="100%" height="600px">
+    </div>
+    
+    <article>
+        <img class="i2020"src="../img/dragon.svg" alt="fish" width="60%" >
+        <div class="total">
+        <picture>
+            <source media="(min-width:1000px)" srcset="img/1000.jpg">
+            <source media="(min-width:800px)" srcset="img/800.jpg">
+            <source media="(min-width:600px)" srcset="img/600.jpg">
+            <img src="1000.jpg" alt="tras">
+
+        </picture>
+    </div>
+    </article>
+    
+    <footer>
+
+    </footer>
+</div>
+</body>
+</html>
