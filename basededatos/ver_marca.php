@@ -32,23 +32,21 @@
                 $row = mysqli_num_rows($res);
                 echo '<div class="barra">'; 
                 ?>
-                Elementos en tabla: <?php echo $row ?>
+                Elementos en tabla: <?php echo $row;
+                            echo '<select>';?>
                         <?php while ($f = $res->fetch_assoc()) { 
                            
-                            echo '<option value="'.$f['marca_id'].'">'.$f['marca_nombre'].'>>>>'.$f['marca_id'].'</option>';
-                        
+                           echo '<option value="'.$f['marca_id'].'">'.$f['marca_nombre'].'>>>>'.$f['marca_id'].'</option>';
+                           
                         }
+                        echo '</select>';
+                        
                         echo '</div>';
                         $sel->close();
                         $con->close();
                         
                         ?>
-                    <tbody>
-                    <tfoot>
-                    <th>ID</th>
-                    <th>MARCA</th>
-                    </tfoot>
-                </table>
+                   
             </div>
         </div>
         <?php
