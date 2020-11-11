@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Calculadora</title>
+        <link href="../actboots/radio/css/bootstrap.css" rel="stylesheet">
+        <script type="text/javascript">
+        var n1, n3 =0, n2 = 0, tipo = "", operaciones = [];
+        
+        function suma() {
+            n2 = n1.value;
+            tipo = "+";
+
+        }
+
+        function resta(){
+            n2 = n1.value;
+            tipo = "-";
+
+        }
+
+        function cuadrado(){
+            n2 = n1.value * n1.value;
+            tipo = "c";
+
+        }
+        
+        function inverso(){
+            n2 = 1/n1.value;
+            tipo = "i";
+        }
+
+        
+        function calcular(){
+           switch (tipo) {
+               case "c":
+                    n3 = n1.value;
+                   n1.value = n1.value * n1.value;
+                   var res = "El cuadrado de " +n3 + " es " +n1.value;
+                   operaciones.push(res);
+
+                   document.getElementById("cuad").innerHTML = operaciones.join(" </br> ");
+                   //document.writeln("<br/>");
+                   
+                   break;
+           
+               case "+":
+                    n3 = n1.value;
+                    n1.value = +n1.value + +n2;
+                    var res = "la suma de " +n2 +" + " +n3 +" es " +n1.value;
+                    operaciones.push(res);
+                    document.getElementById("cuad").innerHTML = operaciones.join(" </br> ");
+                   break;
+                case "-":
+                    n3 = n1.value;
+                   n1.value = +n2 - +n1.value;
+                   var res = "La resta de " +n2 +" - "+n3 + " es " +n1.value;
+                   operaciones.push(res);
+
+                   document.getElementById("cuad").innerHTML = operaciones.join(" </br> ");;
+                   break;
+           
+               case "i":
+                    n3 = n1.value;
+                    n1.value = 1/n1.value;
+                    var res = "El inverso multiplicativo de " +n3 + " es " +n1.value;
+                    operaciones.push(res);
+                    document.getElementById("cuad").innerHTML = operaciones.join(" </br> ");
+                   break;
+                default:
+                var res = "Error, selecciona una opción";
+                    operaciones.push(res);
+                    document.getElementById("cuad").innerHTML = operaciones.join(" </br> ");
+
+                    break;
+           }
+            
+        }
+
+        function inicio(){
+            n1 = document.getElementById("n1")
+            dev = document.getElementById("write");
+            
+        }
+
+        function clean(){
+           document.getElementById("n1").value = "";
+             }
+        
+        </script>
+    </head>
+    <body onLoad="inicio()">
+        <div class="container">
+        </br>
+        <form class="form-horizontal">
+            <input class="form-control col-sm-2" type="number" size="12" id="n1" onclick="clean()">
+            </br>
+            </br>
+            <button type="button" class="btn btn-warning btn-sm form-control" onclick="suma()">+</button>
+            <button type="button" class="btn btn-warning btn-sm form-control" onclick="resta()">-</button>
+            <button type="button" class="btn btn-warning btn-sm
+            form-control" onclick="cuadrado()">x<sup>2</sup></button>
+            <button type="button" class="btn btn-warning btn-sm form-control" onclick="inverso()"><sup>1</sup>/<sub>x</sub></button>
+            <button type="button" class="btn btn-info btn-sm form-control" onclick="calcular()">=</button>
+        </form>
+        <p class="text-center" id="cuad"><br/></p>
+    </div>
+
+
+    </body>
+
+</html>
