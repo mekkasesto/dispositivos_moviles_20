@@ -22,7 +22,7 @@
                     <a data-toggle="dropdown" class="dropdown-toggle" href="#">Proveedores<b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li><a href="registrarProveedor.php">Agregar un Proveedor</a></li>
-                        <li><a href="#">Agregar una sucursal</a></li>
+                        <li><a href="sucursalAgregar.php">Agregar una sucursal</a></li>
                         <li class="divider"></li>
                         <li><a href="ver_marca.php">Gestionar Proveedores</a></li>
                     </ul>
@@ -31,7 +31,7 @@
                 <li class="dropdown">
                     <a data-toggle="dropdown" class="dropdown-toggle" href="#">Refacciones<b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Agregar una refacci&oacute;n</a></li>
+                        <li><a href="refacciones_seleccionar_marca.php">Agregar una refacci&oacute;n</a></li>
                         <li class="divider"></li>
                         <li><a href="#">Consulta rápida</a></li>
                     </ul>
