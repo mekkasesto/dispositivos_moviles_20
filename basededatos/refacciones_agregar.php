@@ -12,6 +12,9 @@ $nombre_marca_seleccionada = $_GET['marca_nombre'];
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!--código que incluye Bootstrap-->
         <?php include'inc/incluye_bootstrap.php' ?>
+        <link href="css/sweetalert.css" rel="stylesheet">
+        <script src="js/sweetalert.min.js">
+        </script>
         <!--termina código que incluye Bootstrap-->
 
     </head>
@@ -55,4 +58,5 @@ $nombre_marca_seleccionada = $_GET['marca_nombre'];
         </div>
     </body>
 </html>
+
 

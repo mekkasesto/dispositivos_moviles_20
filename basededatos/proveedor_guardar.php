@@ -12,12 +12,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $ins=$con->prepare("INSERT INTO proveedor VALUES(?,?,?,?,?,?)");
     $ins->bind_param("isssss",$id,$nombre_del_proveedor_post,$direccion_del_proveedor_post,$telefono_1_post,$telefono_2_post,$correo_proveedor_post);
     if($ins->execute()){
-    	echo "<script> alert('".$done."'); </script>";
+    	header("Location: alerta.php?tipo=exito&operacion=Proveedor guardado&destino=registrarProveedor.php");
     	
         
     }
     else{
-    	echo "<script> alert('".$nodone."'); </script>";
+    	header("Location: alerta.php?tipo=fracaso&operacion=Proveedor no guardado&destino=registrarProveedor.php");
     	
 
         
@@ -42,3 +42,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
     $con->close();*/
 }
+?>
