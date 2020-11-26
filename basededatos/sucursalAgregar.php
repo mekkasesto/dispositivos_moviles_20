@@ -41,19 +41,20 @@
                 </div>
                 <form role="form" id="login-form" method="post" class="form-signin" action="sucursales_guardar.php">
                     <div class="h4">
-                    Seleccione a un proveedor  <?php /*echo $row;*/
-                    echo '</br>';
-                            echo "<select id='proveedor' onchange='pass()'>";?>
-                            
-                        <?php while ($f = $res->fetch_assoc()) { 
-                           
-                           echo '<option value="'.$f['proveedor_id'].'">'.$f['proveedor_nombre'].'>>>>'.$f['proveedor_id'].'</option>';
-                           
-                           
+                    Seleccione a un proveedor   
+                    </br>
+                        <select name="proveedor_id">
+                        <?php while ($f = $res->fetch_assoc()) { ?>
+                            <option value="<?php echo $f['proveedor_id'] ?>">
+                           <?php echo $f['proveedor_nombre'] ?>
+                            </option>
+                            <?php
                         }
-                        echo '</select>';
+                    $sel->close();
+                    $con->close();?>
+                        </select>
                         
-                        ?>
+                        
                         
                     </div>
 
@@ -63,7 +64,7 @@
                     </div>
 
                     <div id="none">
-                        <input type="text">
+                        <input type="text" hidden>
                     </div>
 
                     <div class="form-group">
@@ -93,9 +94,7 @@
                     <button type="submit" class="btn btn-primary">Guardar</button>
                     <input type="reset" class="btn btn-default" 
                     value="Limpiar">
-                    <?php
-                    $sel->close();
-                    $con->close();?>
+                    
                 </form>
             </div>
             </div>
