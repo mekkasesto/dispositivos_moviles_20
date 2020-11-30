@@ -1,8 +1,8 @@
 <!– PARA EJEMPLO DASC — >
 
 <?php
-$id_marca_seleccionada = $_GET['marca_id'];
-$nombre_marca_seleccionada = $_GET['marca_nombre'];
+$id = $_GET['refaccion_id'];
+$refa = $_GET['refaccion_nombre'];
 ?>
 <!DOCTYPE html>
 <html>
@@ -39,15 +39,20 @@ $nombre_marca_seleccionada = $_GET['marca_nombre'];
                 ?>
                     
 
-                <form role="form" id="login-form" method="post" class="form-signin" action="refacciones_guardar.php">
+                <form role="form" id="login-form" method="post" class="form-signin" action="cotizarGuardar.php">
                     <div class="h2">
                         Cotizar con Proveedor
                     </div>
 
                     <div class="form-group">
+                        <label>ID de refaccion</label>
+                        <input type="text" id="refaccion_id" class="form-control" name="refaccionId" value="<?php echo $id?>" readonly="" placeholder="<?php echo $refa?>">
+                    </div>
+
+                    <div class="form-group">
                     Seleccione a un proveedor  <?php /*echo $row;*/
                     echo '</br>';
-                            echo "<select id='proveedor' onchange='pass()'>";?>
+                            echo "<select name='proveedorId'>";?>
                             
                         <?php while ($f = $res->fetch_assoc()) { 
                            
@@ -62,7 +67,7 @@ $nombre_marca_seleccionada = $_GET['marca_nombre'];
                     <div class="form-group">
                         <label>Fecha de solicitud de precios</label>
                         <input type="date" id="date" 
-                        step="1" class="form-control" name="fecha_solicitud" value="<?php echo date("Y-m-d"); ?>"required>
+                        step="1" class="form-control"name="fecha_solicitud" value="<?php echo date("Y-m-d"); ?>"required>
                     </div>
 
                     <div class="form-group">
@@ -77,4 +82,3 @@ $nombre_marca_seleccionada = $_GET['marca_nombre'];
         </div>
     </body>
 </html>
-

@@ -33,7 +33,7 @@
                     <ul class="dropdown-menu">
                         <li><a href="refacciones_seleccionar_marca.php">Agregar una refacci&oacute;n</a></li>
                         <li class="divider"></li>
-                        <li><a href="#">Consulta rápida</a></li>
+                        <li><a href="verRefacciones.php">Consulta rápida</a></li>
                     </ul>
                 </li>
             
