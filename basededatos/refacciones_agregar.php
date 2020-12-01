@@ -24,7 +24,7 @@ $nombre_marca_seleccionada = $_GET['marca_nombre'];
         <!--termina código que incluye el menú responsivo-->
         <div class="container">
             <div class="jumbotron">
-                <form role="form" id="login-form" method="post" class="form-signin" action="refacciones_guardar.php">
+                <form enctype="multipart/form-data" role="form" id="login-form" method="post" class="form-signin" action="refacciones_guardar.php">
                     <div class="h2">
                         Detalles de la refacci&oacute;n
                     </div>
@@ -46,10 +46,10 @@ $nombre_marca_seleccionada = $_GET['marca_nombre'];
                                placeholder="Ingresa descripci&oacute;n de esta refacci&oacute;n" style="text-transform:uppercase;">
                     </div>
                     <div class="form-group">
-                        <label for="ejemplo_archivo_1">Adjuntar un archivo</label>
-                        <input type="file" id="ejemplo_archivo_1">
-                        <p class="help-block">No se ha implementado la carga de im&aacute;genes</p>
-                    </div>
+                        <label class="custom-file">Adjuntar un archivo</label>
+                        <input type="file" id="foto" name="foto" class="custom-file-input">
+                        <span class="custom-file-control"></span>
+                     </div>
                     <br>
                     <button type="submit" class="btn btn-primary">Guardar</button>
                     <input type="reset" class="btn btn-default" value="Limpiar">
