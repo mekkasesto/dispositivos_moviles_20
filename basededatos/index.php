@@ -20,6 +20,7 @@
         <!--termina código que incluye el menú responsivo-->
         <div class="container barra">
             <div class="jumbotron barra">
+            <img src="imgRefacciones/logocopycentro.png" alt="logo">
             
                 
             </div>

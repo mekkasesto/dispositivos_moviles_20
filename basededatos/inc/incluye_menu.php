@@ -14,7 +14,7 @@
         <div id="navbarCollapse" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
                 
-                <li><a href="#">Cotizaciones</a></li>
+                <li><a href="cotizacion_inicia.php">Cotizaciones</a></li>
                 <!-- ELEMENTOS INDIVIDUALES DEL MENÚ
                 <li><a href="#">Cotizaciones</a></li>
                  -->
