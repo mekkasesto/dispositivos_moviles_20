@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#toHome{
+    font-size: 12px;
+    font-weight: bold;
+    background:#EDEDED;
+    padding: 10px;
+    border-radius: 13px;
+    margin: 80px auto;
+    width: 240px;
+    height:100px;
+
+}
+
+#toHome label{
+    font-size: 10px;
+    
+    width: 80px;
+   /* float: left;*/
+    color: #333;
+    padding: 8px;
+    margin:  5px auto;
+    border-radius: 20px;
+    padding: 4px;
+
+}
+#toHome p{
+    font-size: 0.6em;
+    text-align: center;
+    color: crimson;
+    padding: 5px;
+}
+
+
+#bInicio, #pass, #name{
+    margin: 5px auto;
+    border-radius: 5px;
+    
+
+}
+
+#name{
+    margin-left: 18px;
+}
+
+#bInicio{
+
+    margin: 8px 0 0 95px;
+}
